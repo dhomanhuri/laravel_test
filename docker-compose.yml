@@ -1,0 +1,13 @@
+version: "3"
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - .:/var/www/html
+        ports:
+            - "8200:8000"
+        environment:
+            - APP_ENV=Laravel
+            - APP_KEY=base64:iDv4FBGiZsJp10LxlpXlo1EopuvFCCSYQfsExeH41yE=
